@@ -1,0 +1,9 @@
+{
+  "name": "alibabacloud.com",
+  "ipv4": {
+    "url": "update_alibabacloud_com.sh"
+  },
+  "ipv6": {
+    "url": "update_alibabacloud_com.sh"
+  }
+}
