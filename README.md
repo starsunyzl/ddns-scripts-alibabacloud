@@ -1,8 +1,8 @@
-适用于 OpenWrt 官方 DDNS 客户端（[ddns-scripts](https://openwrt.org/docs/guide-user/base-system/ddns) ）的阿里云（aliyun、AlibabaCloud）DDNS 动态域名更新插件，支持 IPv6，支持多 IP 记录值。
+适用于 [OpenWrt 官方 DDNS 客户端](https://openwrt.org/docs/guide-user/base-system/ddns) 的阿里云（aliyun、AlibabaCloud）DDNS 动态域名更新插件，支持 IPv6，支持多 IP 记录值。
 
 ## 安装
 
-1. 安装 OpenWrt 官方 DDNS 客户端和其它依赖包：  
+1. 安装 OpenWrt 官方 DDNS 客户端和依赖包：  
 `opkg install luci-app-ddns bind-host curl openssl-util`
 2. 下载最新的插件包：  
 [`https://github.com/starsunyzl/ddns-scripts-alibabacloud/archive/refs/heads/main.zip`](https://github.com/starsunyzl/ddns-scripts-alibabacloud/archive/refs/heads/main.zip)
