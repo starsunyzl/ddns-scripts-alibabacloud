@@ -30,7 +30,10 @@ local __RECORD_TYPE="A"
 [ $use_ipv6 -eq 1 ] && __RECORD_TYPE="AAAA"
 
 url_encode() {
-  printf %s "$1" | curl -Gso /dev/null -w %{url_effective} --data-urlencode @- "" | cut -c 3-
+	local __ENCODED
+	__ENCODED="$(awk -v str="$1" 'BEGIN{ORS="";for(i=32;i<=127;i++)lookup[sprintf("%c",i)]=i
+		for(k=1;k<=length(str);++k){enc=substr(str,k,1);if(enc!~"[-_.~a-zA-Z0-9]")enc=sprintf("%%%02X", lookup[enc]);print enc}}')"
+  printf %s "$__ENCODED"
 }
 
 percent_encode() {
